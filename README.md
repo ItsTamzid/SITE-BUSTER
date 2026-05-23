@@ -1,7 +1,6 @@
 import requests
 import os 
 
-# --- टर्मिनल के चमकीले रंग ---
 RED = "\033[91m"
 GREEN = "\033[92m"
 YELLOW = "\033[93m"
@@ -9,7 +8,6 @@ BLUE = "\033[94m"
 BOLD = "\033[1m"
 RESET = "\033[0m"
 
-# टूल का मुख्य डेंजर बैनर
 BANNER = f"""
 {RED}{BOLD}  ____ ___ _____ _____   ____  _   _ ____ _____ _____ ____  
  / ___|_ _|_   _| ____| | __ )| | | / ___|_   _| ____|  _ \\ 
@@ -33,7 +31,6 @@ if main_page == "1":
 	os.system('clear')
 	print(BANNER)
 
-	# कोमा से अलग करना और स्पेस साफ़ करना 
 	url = [i.strip() for i in user_input.split(",")]
      
 	def SITE_BUSTER(url_list):
@@ -86,4 +83,4 @@ elif main_page == "2":
 	print(f"   {BLUE}> WHAT SITE-BUSTER EXACTLY DO!{RESET} \n     ————————————————————————————\n")
 	print("   SITE-BUSTER, go and ask in the link to you provide if the \n   server reply then SITE-BUSTER say you status_code 200! which \n   is Success! if server doesn't reply or anything else then \n   SITE-BUSTER, provided you to the exact status_code which the \n   server provided. that means SITE-BUSTER only provided you server \n   status_code.\n")
 	print(f"   {BLUE}> CREATOR/LINKS{RESET} \n     —————————————\n")
-	print(f"   The creator name is '{GREEN}{BOLD}TAMZID{RESET}' \n")
+	print(f"   The creator name is 'TAMZID' \n")
