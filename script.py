@@ -60,12 +60,20 @@ def main_menu():
 		
 		if user_choice == "":
 			continue
-			
+		
 		elif user_choice == "0":
-			os.system('clear')
-			print(BANNER)
-			print(f"{RED} THANKS FOR USING THIS TOOL ...{RESET}")
-			sys.exit()  # साफ तरीके से स्क्रिप्ट बंद करने के लिए
+            os.system('clear')
+            print(BANNER)
+            print(f"{RED} THANKS FOR USING THIS TOOL ...{RESET}\n")
+            
+            # User ko directory se nikal kar seedhe home page par bhejne ke liye
+            os.chdir(os.path.expanduser("~"))
+            
+            # Terminal ki screen ko home directory par active karne ke liye
+            os.system("cd ~ && bash")
+            
+            sys.exit()
+
 			
 		elif user_choice == "2":
 			os.system('clear')
@@ -76,7 +84,7 @@ def main_menu():
 			print(f"   {BLUE}> WHAT SITE-BUSTER EXACTLY DO!{RESET} \n     ————————————————————————————\n")
 			print("   SITE-BUSTER, go and ask in the link to you provide if the \n   server reply then SITE-BUSTER say you status_code 200! which \n   is Success! if server doesn't reply or anything else then \n   SITE-BUSTER, provided you to the exact status_code which the \n   server provided. that means SITE-BUSTER only provided you server \n   status_code.\n")
 			print(f"   {BLUE}> CREATOR/LINKS{RESET} \n     —————————————\n")
-			print(f"   The creator name is 'TAMZID' \n")
+			print(f"   {GREEN}The creator name is 'TAMZID' \n   GitHub--> htpps://www.github.com/ItsTamzid {RESET}\n")
 			input(f"\n{BLUE}Press Enter to go back to Main Menu...{RESET}")
 			
 		elif user_choice == "1":
