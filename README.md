@@ -1,5 +1,6 @@
 import requests
 import os 
+import sys
 
 RED = "\033[91m"
 GREEN = "\033[92m"
@@ -9,13 +10,12 @@ BOLD = "\033[1m"
 RESET = "\033[0m"
 
 BANNER = f"""
-BANNER = f"""
 {RED}{BOLD} ____ ___ _____ _____  ___  _   _ ____ _____ 
 / ___|_ _|_   _| ____|  _ \\| | | / ___|_   _|
 \\___ \\| |  | | |  _| | |_) | | | \\___ \\ | |  
  ___) | |  | | | |___|  _ <| |_| |___) || |  
 |____/___| |_| |_____|_| \\_\\\\___/|____/ |_|  
-{RESET}{YELLOW}     >> Advanced Multi-URL Recon Weapon <<
+{RESET}{YELLOW}   >> Advanced Multi-URL Recon Weapon <<
 {RESET}"""
 
 def SITE_BUSTER(url_list):
@@ -57,19 +57,18 @@ def main_menu():
 	while True:
 		os.system('clear')
 		print(BANNER)
-		main_page = input(f"      • {GREEN}1) SITE SCAN-STATUS_CODE{RESET}\n      • {YELLOW}2) About{RESET}\n\n      • {RED}0) Exit!{RESET} \n\n          {BLUE}PICK A NUMBER-->>{RESET} ").strip()
+		user_choice = input(f"      • {GREEN}1) SITE SCAN-STATUS_CODE{RESET}\n      • {YELLOW}2) About{RESET}\n\n      • {RED}0) Exit!{RESET} \n\n          {BLUE}PICK A NUMBER-->>{RESET} ").strip()
 		
-		if main_page == "":
+		if user_choice == "":
 			continue
 			
-		elif main_page == "0":
-			print(f"{RED} THANKS FOR USING THIS TOOL{RESET} ")
-			print(f"{RED} THANKS FOR USING THIS TOOL .{RESET}")
-			print(f"{RED} THANKS FOR USING THIS TOOL ..{RESET}")
+		elif user_choice == "0":
+			os.system('clear')
+			print(BANNER)
 			print(f"{RED} THANKS FOR USING THIS TOOL ...{RESET}")
-			exit()
+			sys.exit()  # साफ तरीके से स्क्रिप्ट बंद करने के लिए
 			
-		elif main_page == "2":
+		elif user_choice == "2":
 			os.system('clear')
 			print(BANNER)
 			print(f"                              {YELLOW}{BOLD}ABOUT{RESET} \n                            —————————\n\n")
@@ -81,7 +80,7 @@ def main_menu():
 			print(f"   The creator name is 'TAMZID' \n")
 			input(f"\n{BLUE}Press Enter to go back to Main Menu...{RESET}")
 			
-		elif main_page == "1":
+		elif user_choice == "1":
 			while True:
 				os.system('clear')
 				print(BANNER)
