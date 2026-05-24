@@ -1,6 +1,6 @@
 #This Tool scan links to you provided and will get to you status_code of the server/website.
 
-For Termux/Linux: 
+For Termux/Linux:
 ———————————
 
 pkg install update && pkg install upgrade 
