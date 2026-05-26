@@ -15,8 +15,10 @@ BANNER = f"""
 \\___ \\| |  | | |  _| |  _ \\| | | \\___ \\ | | |  _| | |_) |
  ___) | |  | | | |___| |_) | |_| |___) || | | |___|  _ < 
 |____/___| |_| |_____|____/ \\___/|____/ |_| |_____|_| \\_\\
-{RESET}{YELLOW}          >> Advanced Multi-URL Recon Weapon <<
+{RESET}{YELLOW}       >> Advanced Multi-URL Recon Weapon <<
 {RESET}"""
+
+
 def SITE_BUSTER(url_list):
 	print(f"             {BLUE}{BOLD}=== SITE-BUSTER ACTIVE ==={RESET}\n")
 	for i in url_list:
@@ -60,20 +62,14 @@ def main_menu():
 		
 		if user_choice == "":
 			continue
-		
+			
 		elif user_choice == "0":
-            os.system('clear')
-            print(BANNER)
-            print(f"{RED} THANKS FOR USING THIS TOOL ...{RESET}\n")
-            
-            # User ko directory se nikal kar seedhe home page par bhejne ke liye
-            os.chdir(os.path.expanduser("~"))
-            
-            # Terminal ki screen ko home directory par active karne ke liye
-            os.system("cd ~ && bash")
-            
-            sys.exit()
-
+			print(f"{RED}\n\n          THANKS FOR USING THIS TOOL ...{RESET}\n")
+			
+			# Script ko band karke terminal ko home directory par bhejna
+			os.chdir(os.path.expanduser("~"))
+			os.system("cd ~ && bash")
+			sys.exit()  
 			
 		elif user_choice == "2":
 			os.system('clear')
@@ -84,7 +80,7 @@ def main_menu():
 			print(f"   {BLUE}> WHAT SITE-BUSTER EXACTLY DO!{RESET} \n     ————————————————————————————\n")
 			print("   SITE-BUSTER, go and ask in the link to you provide if the \n   server reply then SITE-BUSTER say you status_code 200! which \n   is Success! if server doesn't reply or anything else then \n   SITE-BUSTER, provided you to the exact status_code which the \n   server provided. that means SITE-BUSTER only provided you server \n   status_code.\n")
 			print(f"   {BLUE}> CREATOR/LINKS{RESET} \n     —————————————\n")
-			print(f"   {GREEN}The creator name is 'TAMZID' \n   GitHub--> htpps://www.github.com/ItsTamzid {RESET}\n")
+			print(f"   The creator name is 'TAMZID' \n")
 			input(f"\n{BLUE}Press Enter to go back to Main Menu...{RESET}")
 			
 		elif user_choice == "1":
