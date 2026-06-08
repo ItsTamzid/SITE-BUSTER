@@ -72,7 +72,7 @@ def main_menu():
                 	
                 url_ip = [i.strip() for i in user_ip.split(",")]
                 get_ip_address(url_ip)
-                after = input(f"\n{BLUE}Scanning complete. Press Enter to back or 'C' to continue...{RESET}")
+                after = input(f"\n\n{BLUE}Scanning complete. Press Enter to back or 'C' to continue...{RESET}")
                 if after.lower() != 'c':
                 	time.sleep(0.7)
                 	break
@@ -81,13 +81,13 @@ def main_menu():
             while True:
                 os.system('clear')
                 print(BANNER)
-                user_input = input(f"    • {BOLD}Enter URLs separated by commas (,) or 'B' to back!{RESET}\n\n   {BLUE}-->> {RESET}").strip()
-                if user_input.lower() == 'b':
-                	time.sleep(0.7)
-                	break
-                if user_input == "":
+                user_input = input(f"    • {BOLD}Enter URLs separated by commas (,) or 'C' to back!{RESET}\n\n   {BLUE}-->> {RESET}").strip()
+                if user_input.lower() == 'c':
                 	time.sleep(0.7)
                 	continue
+                if user_input == "":
+                	time.sleep(0.7)
+                	break
                 url = [i.strip() for i in user_input.split(",")]
                 SITE_BUSTER(url)
                 after_status_scan = input(f"\n{BLUE}Scanning complete. Press Enter to go back or Enter [b]...{RESET}")
